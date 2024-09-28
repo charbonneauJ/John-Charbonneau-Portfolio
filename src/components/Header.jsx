@@ -10,10 +10,10 @@ function Header() {
         <Navbar.Toggle aria-controls="header.nav" />
         <Navbar.Collapse id="header.nav">
           <Nav className="me-auto">
-            <Link to="/">About Me</Link>
-            <Link to="/contact">Contact</Link>
-            <Link to="/portfolio">Portfolio</Link>
-            <Link to="/resume">Resume</Link>
+            <Nav.Link as={Link} to="/">About Me</Nav.Link>
+            <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+            <Nav.Link as={Link} to="/portfolio">Portfolio</Nav.Link>
+            <Nav.Link as={Link} to="/resume">Resume</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

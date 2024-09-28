@@ -1,16 +1,17 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-function PCards() {
+function PCards({ img, title, link, git, width }) {
+
+  // console.log(props);
+  
   return (
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
+    <Card style={{ width }}>
+      <Card.Img variant="top" src={img} />
       <Card.Body>
-        <Card.Title>Project:</Card.Title>
-        <Card.Text>
-         Here is a project I did
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Card.Title>{title}</Card.Title>
+        <Button href={link} variant="primary">Live Site</Button>
+        <Button href={git} variant="info">Git Repository</Button>
       </Card.Body>
     </Card>
   );
