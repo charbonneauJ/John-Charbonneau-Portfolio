@@ -1,51 +1,57 @@
 import React from "react";
 import PCards from "../components/Cards";
-import placeholder from "../images/react.svg";
+// import placeholder from "../images/react.svg";
+import image1 from "../images/The-MET-Blog.png";
+import image2 from "../images/Charizard-vs-a-chimpanzee.png";
+import image3 from "../images/The-social-network.png";
+import image4 from "../images/The-super-awesome-tech-blog.png";
+import image5 from "../images/Horiseon-marketing-cleanup.png";
+import image6 from "../images/Ecommerce-demo.png";
+// import Container from 'react-bootstrap/Container';
 
-
-
+// How do I make this dynamic? For all of the images so I don't need to do them one by one?
 
 const projects = [
   {
-    title: "Project 1",
-    img: placeholder,
-    link: "https://www.google.com",
-    git: "https://www.github.com",
-    width: "25rem",
-  },
-  {
-    title: "Project 2",
-    img: placeholder,
-    link: "https://www.google.com",
-    git: "https://www.github.com",
+    title: "The Met Blog",
+    img: image1,
+    link: "https://dashboard.render.com/",
+    git: "https://github.com/charbonneauJ/The-MET-Blog",
     width: "18rem",
   },
   {
-    title: "Project 3",
-    img: placeholder,
-    link: "https://www.google.com",
-    git: "https://www.github.com",
+    title: "Charizard vs a Chimpanzee",
+    img: image2,
+    link: "https://charbonneauj.github.io/Charizard-vs-a-chimpanzee/",
+    git: "https://github.com/charbonneauJ/Charizard-vs-a-Chimpanzee",
     width: "18rem",
   },
   {
-    title: "Project 4",
-    img: placeholder,
-    link: "https://www.google.com",
-    git: "https://www.github.com",
+    title: "The Social Network!",
+    img: image3,
+    link: "https://drive.google.com/file/d/1pZK79EDDAvDVx3mMonEQe1wYDi_6t1d0/view",
+    git: "https://github.com/charbonneauJ/The-Social-Network?tab=readme-ov-file",
     width: "18rem",
   },
   {
-    title: "Project 5",
-    img: placeholder,
-    link: "https://www.google.com",
-    git: "https://www.github.com",
+    title: "The Super Awesome Tech Blog",
+    img: image4,
+    link: "https://dashboard.render.com/",
+    git: "https://github.com/charbonneauJ/Super-Awesome-Tech-Blog",
     width: "18rem",
   },
   {
-    title: "Project 6",
-    img: placeholder,
-    link: "https://www.google.com",
-    git: "https://www.github.com",
+    title: "Horiseon Marketing Cleanup",
+    img: image5,
+    link: "https://charbonneauj.github.io/Horiseon-Marketing-Cleanup/",
+    git: "https://github.com/charbonneauJ/Horiseon-Marketing-Cleanup",
+    width: "18rem",
+  },
+  {
+    title: "Ecommerce Demo",
+    img: image6,
+    link: "https://dashboard.render.com/",
+    git: "https://github.com/charbonneauJ/Ecommerce-Demo",
     width: "18rem",
   },
 ];
@@ -53,6 +59,7 @@ const projects = [
 export default function Portfolio() {
   return (
     <>
+      {/* <Container fluid></Container> */}
       <h1>Portfolio</h1>
       {projects.map((project, index) => (
         <PCards
@@ -63,6 +70,7 @@ export default function Portfolio() {
           git={project.git}
           width={project.width}
         />
+  
       ))}
     </>
   );
