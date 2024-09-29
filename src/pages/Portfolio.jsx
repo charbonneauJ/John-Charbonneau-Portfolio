@@ -7,7 +7,9 @@ import image3 from "../images/The-social-network.png";
 import image4 from "../images/The-super-awesome-tech-blog.png";
 import image5 from "../images/Horiseon-marketing-cleanup.png";
 import image6 from "../images/Ecommerce-demo.png";
-// import Container from 'react-bootstrap/Container';
+import Container from 'react-bootstrap/Container';
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 // How do I make this dynamic? For all of the images so I don't need to do them one by one?
 
@@ -59,19 +61,23 @@ const projects = [
 export default function Portfolio() {
   return (
     <>
-      {/* <Container fluid></Container> */}
+      <Container>
       <h1>Portfolio</h1>
-      {projects.map((project, index) => (
-        <PCards
-          key={index}
-          img={project.img}
-          title={project.title}
-          link={project.link}
-          git={project.git}
-          width={project.width}
-        />
-  
-      ))}
+      <Row>
+        {projects.map((project, index) => (
+          <Col xs={4}>
+            <PCards
+              key={index}
+              img={project.img}
+              title={project.title}
+              link={project.link}
+              git={project.git}
+              width={project.width}
+            />
+          </Col>
+        ))}
+      </Row>
+      </Container>
     </>
   );
 }
